@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/avenir.woff") format("woff");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply m-auto max-w-screen-3xl md:w-10/12 lg:w-9/12 w-10/12 flex flex-col;
+  }
+
+  header {
+    @apply bg-white h-20 md:h-24 fixed z-50 top-0 left-0 w-full px-8 md:px-0 max-w-screen-3xl right-0 m-auto text-tertiary;
+  }
+
+  .nav-item {
+    @apply flex items-center text-center text-sm md:text-base font-semibold px-4 last:mr-0 hover:text-primary;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "avenir", sans-serif;
+  color: #2c3637;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
