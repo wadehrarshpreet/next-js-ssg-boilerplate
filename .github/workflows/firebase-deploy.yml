@@ -21,7 +21,7 @@ jobs:
         run: npm i -g yarn firebase-tools &&  npm cache clean --force && yarn
 
       - name: Make build
-        run: mkdir out && yarn build
+        run: mkdir out && yarn static
 
       - name: Deploy to Firebase
         run: firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
